@@ -1,11 +1,11 @@
 import ogImageSrc from "@images/social.png";
 
 export const SITE = {
-  title: "ScrewFast",
+  title: "PriceResonance",
   tagline: "Top-quality Hardware Tools",
-  description: "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs. Start exploring and contact our sales team for superior quality and reliability.",
-  description_short: "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs.",
-  url: "https://screwfast.uk",
+  description: "PriceResonance offers top-tier hardware tools and expert construction services to meet all your project needs. Start exploring and contact our sales team for superior quality and reliability.",
+  description_short: "PriceResonance offers top-tier hardware tools and expert construction services to meet all your project needs.",
+  url: "https://priceresonance.com",
   author: "Emil Gulamov",
 };
 
@@ -34,6 +34,6 @@ export const OG = {
   type: "website",
   url: SITE.url,
   title: `${SITE.title}: : Hardware Tools & Construction Services`,
-  description: "Equip your projects with ScrewFast's top-quality hardware tools and expert construction services. Trusted by industry leaders, ScrewFast offers simplicity, affordability, and reliability. Experience the difference with user-centric design and cutting-edge tools. Start exploring now!",
+  description: "Equip your projects with PriceResonance's top-quality hardware tools and expert construction services. Trusted by industry leaders, PriceResonance offers simplicity, affordability, and reliability. Experience the difference with user-centric design and cutting-edge tools. Start exploring now!",
   image: ogImageSrc,
 };
