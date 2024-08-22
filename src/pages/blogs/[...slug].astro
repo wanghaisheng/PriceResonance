@@ -4,6 +4,12 @@ import { SITE } from "@data/constants";
 import MainLayout from "@/layouts/MainLayout.astro";
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
+import AvatarBlogLarge from "@components/ui/avatars/AvatarBlogLarge.astro";
+import CardRelated from "@components/ui/cards/CardRelated.astro";
+import Bookmark from "@components/ui/buttons/Bookmark.astro";
+import SocialShare from "@components/ui/buttons/SocialShare.astro";
+import PostFeedback from "@components/ui/feedback/PostFeedback.astro";
+import { capitalize, formatDate } from "@utils/utils";
 
 // Use `getStaticPaths` to generate static routes for generated pages on build
 export async function getStaticPaths() {
@@ -18,6 +24,13 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 
 const { Content } = await post.render();
+// Get all blog posts
+const blogsPosts: CollectionEntry<"blogs">[] = await getCollection(
+  "blogs",
+  ({ id }) => {
+    return id.startsWith("en/");
+  }
+);
 
 
 // Filter out the current post to get related posts
