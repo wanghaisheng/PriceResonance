@@ -1,15 +1,17 @@
-const fs = require('fs');
-const path = require('path');
-const sharp = require('sharp');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import sharp from 'sharp';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 let successCount = 0;
 let errorCount = 0;
 let skippedCount = 0;
 
-// Function to convert a single image to AVIF
 async function convertToAvif(inputPath, outputPath) {
   try {
-    // Check if output file exists and is newer than input file
     if (fs.existsSync(outputPath)) {
       const inputStat = fs.statSync(inputPath);
       const outputStat = fs.statSync(outputPath);
@@ -21,7 +23,7 @@ async function convertToAvif(inputPath, outputPath) {
     }
 
     await sharp(inputPath)
-      .avif({ quality: 50 }) // Adjust quality as needed (0-100)
+      .avif({ quality: 50 })
       .toFile(outputPath);
     console.log(`Converted: ${inputPath} -> ${outputPath}`);
     successCount++;
@@ -31,9 +33,7 @@ async function convertToAvif(inputPath, outputPath) {
   }
 }
 
-// Function to process all images in a directory
 async function processDirectory(inputDir, outputDir) {
-  // Create output directory if it doesn't exist
   if (!fs.existsSync(outputDir)) {
     fs.mkdirSync(outputDir, { recursive: true });
   }
@@ -45,25 +45,23 @@ async function processDirectory(inputDir, outputDir) {
     const stat = fs.statSync(inputPath);
 
     if (stat.isDirectory()) {
-      // Recursively process subdirectories
       await processDirectory(inputPath, path.join(outputDir, file));
     } else if (stat.isFile() && /\.(jpg|jpeg|png|webp)$/i.test(file)) {
-      // Convert image files
       const outputPath = path.join(outputDir, `${path.parse(file).name}.avif`);
       await convertToAvif(inputPath, outputPath);
     }
   }
 }
 
-// Main function
 async function main() {
   const startTime = Date.now();
 
-  await processDirectory('src/data_files/images', 'src/images');
-  await processDirectory('src/data_files/images/blogs', 'src/images/blogs');
+  const projectRoot = process.cwd();
+  await processDirectory(path.join(projectRoot, 'src', 'data_files', 'images'), path.join(projectRoot, 'src', 'images'));
+  await processDirectory(path.join(projectRoot, 'src', 'data_files', 'images', 'blogs'), path.join(projectRoot, 'src', 'images', 'blogs'));
 
   const endTime = Date.now();
-  const duration = (endTime - startTime) / 1000; // Convert to seconds
+  const duration = (endTime - startTime) / 1000;
 
   console.log('Conversion complete!');
   console.log(`Successfully converted: ${successCount} images`);
