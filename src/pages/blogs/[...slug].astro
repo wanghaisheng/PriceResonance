@@ -162,20 +162,16 @@ const pageTitle: string = `${post.data.title} | ${SITE.title}`;
 
   </section>
     <div class="mx-auto max-w-screen-xl px-4 md:px-8 mt-8">
-      <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
         <PostFeedback
           title="Was this post helpful?"
           firstChoice="Yes"
           secondChoice="No"
         />
-        <div class="flex items-center gap-x-4">
-          <Bookmark />
-          <div
-            class="h-6 border-e border-neutral-400 dark:border-neutral-500"
-          >
-          </div>
-          <SocialShare pageTitle={post.data.title} />
-        </div>
+        <div class="h-6 border-e border-neutral-400 dark:border-neutral-500 hidden sm:block"></div>
+        <Bookmark />
+        <div class="h-6 border-e border-neutral-400 dark:border-neutral-500 hidden sm:block"></div>
+        <SocialShare pageTitle={post.data.title} />
       </div>
     </div>
   <!--Related articles section-->
