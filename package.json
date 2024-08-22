@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "convert-images": "node scripts/convertToAvif.js",
+    "convert-images": "node $(pwd)/scripts/convertToAvif.js",
     "prebuild": "npm run convert-images",
     "dev": "astro dev",
     "start": "astro dev",
