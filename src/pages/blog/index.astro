@@ -14,6 +14,11 @@ const englishBlogEntries = await getCollection("blog", ({ id }) => {
   return id.startsWith("en/");
 });
 
+const englishBlogsEntries = await getCollection("blogs", ({ id }) => {
+  return id.startsWith("en/");
+});
+
+
 const englishInsightsEntries = await getCollection("insights", ({ id }) => {
   return id.startsWith("en/");
 });
@@ -24,6 +29,9 @@ const blogPosts: CollectionEntry<"blog">[] = englishBlogEntries.sort(
 );
 // Get all insights posts
 const insightPosts: CollectionEntry<"insights">[] = englishInsightsEntries;
+// Get all blogs posts
+
+const blogsPosts: CollectionEntry<"blogs">[] = englishBlogsEntries;
 
 // Separate the most recent post from others
 const mostRecentPost: CollectionEntry<"blog"> = blogPosts[0];
@@ -114,5 +122,14 @@ const pageTitle: string = `Blog | ${SITE.title}`;
         ))
       }
     </div>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        blogsPosts.map((insightEntry) => (
+          <CardInsight insightEntry={insightEntry} />
+        ))
+      }
+    </div>
+
+    
   </section>
 </MainLayout>
