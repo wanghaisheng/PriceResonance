@@ -1,8 +1,14 @@
 ---
-title: "Construire une base de données des plans tarifaires SaaS en 2024"
-description: "Optimiser les stratégies tarifaires SaaS : la clé de la croissance et de la satisfaction client."
-cardImage: "@/images/blogs/blog-1.avif"
-cardImageAlt: "Vue de dessus de l'agencement des outils mécaniques"
+title: "Building saas price plan database in 2024"
+description: "Optimizing SaaS Pricing Strategies: The Key to Business Growth and Customer Satisfaction."
+author: "Jacob"
+authorImage: "@/images/blog/jacob.avif"
+authorImageAlt: "Avatar Description"
+pubDate: 2024-08-22
+cardImage: "@/images/blog/post-1.avif"
+cardImageAlt: "Top view mechanical tools arrangement"
+readTime: 4
+tags: ["database", "price-plan", "saas" ]
 ---
 
 # Le besoin d'une base de données centralisée des plans tarifaires SaaS : rationaliser la prise de décision pour les entreprises
