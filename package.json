@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "convert-images": "node run-convert.js",
+    "convert-images": "node run-convert.mjs",
     "prebuild": "npm run convert-images",
     "dev": "astro dev",
     "start": "astro dev",
