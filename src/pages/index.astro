@@ -37,17 +37,7 @@ const avatarSrcs: Array<string> = [
   />
 
 <HeroSection
-  title={hero.title}
-  subTitle={hero.subTitle}
-  primaryBtn={hero.primaryBtn}
-  primaryBtnURL={hero.primaryBtnURL}
-  secondaryBtn={hero.secondaryBtn}
-  secondaryBtnURL={hero.secondaryBtnURL}
-  withReview={hero.withReview}
-  avatars={hero.avatarSrcs}
-  rating={hero.rating}
-  starCount={hero.starCount}
-  reviews={hero.reviews}
+  {...hero}
   src={heroImage}
   alt={hero.alt}
 />
