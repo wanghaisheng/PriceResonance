@@ -49,9 +49,22 @@ const pageTitle: string = `${post.data.title} | ${SITE.title}`;
 
 <MainLayout title={pageTitle}>
 
-  <section class="py-6 sm:py-8 lg:py-12">
+  <section class='py-5'>
     <!--Page header-->
     <div class="mx-auto max-w-3xl text-left sm:text-center">
+        <!--Blog post tags-->
+        <div
+          class="flex flex-wrap gap-x-2 gap-y-1 sm:flex-nowrap sm:items-center sm:gap-y-0"
+        >
+          {
+            post.data.tags?.map((tag: string) => (
+              <span class="inline-flex items-center gap-x-1.5 rounded-lg bg-neutral-400/30 px-3 py-1.5 text-xs font-medium text-neutral-700 outline-none focus:outline-none focus-visible:outline-none focus-visible:ring dark:bg-neutral-700/60 dark:text-neutral-300">
+                {capitalize(tag)}
+              </span>
+            ))
+          }
+        </div>
+
       <h1
         class="block text-balance text-4xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 md:text-5xl lg:text-6xl"
       >
@@ -60,6 +73,7 @@ const pageTitle: string = `${post.data.title} | ${SITE.title}`;
 
     </div>
 
+    <div class="max-w-2xl item-center justify-between">
 
 
       <div class="mb-6 flex items-center justify-between">
@@ -90,12 +104,14 @@ const pageTitle: string = `${post.data.title} | ${SITE.title}`;
             </div>
           </div>
         </div>
+      </div>
+  </section>
 
 
+  <section class="py-6 sm:py-8 lg:py-12">
     <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-      <div class="grid gap-8 md:grid-cols-3 lg:gap-12">
-        <div class="col-start-2 col-span-2">
-
+      <div class="grid gap-8 md:grid-cols-2 lg:gap-12">
+        <div>
           <div class="h-64 overflow-hidden rounded-lg shadow-lg md:h-auto">
             <Image
               class="h-full w-full object-cover object-center"
@@ -148,18 +164,7 @@ const pageTitle: string = `${post.data.title} | ${SITE.title}`;
           <div
         class="mx-auto grid max-w-screen-lg gap-y-5 sm:flex sm:items-center sm:justify-between sm:gap-y-0"
       >
-        <!--Blog post tags-->
-        <div
-          class="flex flex-wrap gap-x-2 gap-y-1 sm:flex-nowrap sm:items-center sm:gap-y-0"
-        >
-          {
-            post.data.tags?.map((tag: string) => (
-              <span class="inline-flex items-center gap-x-1.5 rounded-lg bg-neutral-400/30 px-3 py-1.5 text-xs font-medium text-neutral-700 outline-none focus:outline-none focus-visible:outline-none focus-visible:ring dark:bg-neutral-700/60 dark:text-neutral-300">
-                {capitalize(tag)}
-              </span>
-            ))
-          }
-        </div>
+
         <!--Bookmark and Share buttons-->
         <div class="flex items-center justify-end gap-x-1.5">
           <Bookmark />
