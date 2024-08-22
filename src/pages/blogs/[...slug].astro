@@ -91,7 +91,7 @@ const pageTitle: string = `${post.data.title} | ${SITE.title}`;
     <div class="max-w-2xl">
       <div class="mb-6 flex items-center justify-between">
         <div class="flex w-full gap-x-5 sm:items-center sm:gap-x-3">
-          <AvatarBlogLarge blogEntry={post} />
+          <AvatarBlogLarge blogsEntry={post} />
           <div class="grow">
             <div class="flex items-center justify-between gap-x-2">
               <div>
@@ -179,7 +179,7 @@ const pageTitle: string = `${post.data.title} | ${SITE.title}`;
     </div>
 
     <div class="grid grid-cols-2 gap-6">
-      {relatedPosts.map((entry) => <CardRelated blogEntry={entry} />)}
+      {relatedPosts.map((entry) => <CardRelated blogsEntry={entry} />)}
     </div>
   </section>  
 </MainLayout>
