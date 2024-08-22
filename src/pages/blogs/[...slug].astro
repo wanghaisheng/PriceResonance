@@ -48,7 +48,6 @@ const pageTitle: string = `${post.data.title} | ${SITE.title}`;
 ---
 
 <MainLayout title={pageTitle}>
-// ... existing code ...
 
 <section class='py-5'>
   <!--Page header-->
@@ -152,7 +151,6 @@ const pageTitle: string = `${post.data.title} | ${SITE.title}`;
       </div>
     </div>
 
-// ... rest of the code ...
 
     </div>
           <div
@@ -161,24 +159,25 @@ const pageTitle: string = `${post.data.title} | ${SITE.title}`;
 
  
       </div>    
-    <PostFeedback
-      title="Was this post helpful?"
-      firstChoice="Yes"
-      secondChoice="No"
-    />
-  </section>
 
-       <!--Bookmark and Share buttons-->
-        <div class="flex items-center justify-end gap-x-1.5">
+  </section>
+    <div class="mx-auto max-w-screen-xl px-4 md:px-8 mt-8">
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+        <PostFeedback
+          title="Was this post helpful?"
+          firstChoice="Yes"
+          secondChoice="No"
+        />
+        <div class="flex items-center gap-x-4">
           <Bookmark />
           <div
-            class="mx-3 block h-4 border-e border-neutral-400 dark:border-neutral-500"
+            class="h-6 border-e border-neutral-400 dark:border-neutral-500"
           >
           </div>
-          <div class="inline-flex">
-            <SocialShare pageTitle={post.data.title} />
-          </div>
+          <SocialShare pageTitle={post.data.title} />
         </div>
+      </div>
+    </div>
   <!--Related articles section-->
   <section class="mx-auto max-w-3xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
     <div class="mb-10 max-w-2xl">
