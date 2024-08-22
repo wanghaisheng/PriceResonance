@@ -1,8 +1,10 @@
 {
-  "name": "",
+  "name": "priceresonance",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
+    "convert-images": "node scripts/convertToAvif.js",
+    "prebuild": "npm run convert-images",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build && node process-html.mjs",
