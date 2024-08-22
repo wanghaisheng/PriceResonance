@@ -6,6 +6,22 @@ import SecondaryCTA from "@components/ui/buttons/SecondaryCTA.astro";
 import ReviewComponent from "@components/ui/blocks/ReviewComponent.astro";
 
 // Define props from Astro
+interface Props {
+  title: string;
+  subTitle?: string;
+  primaryBtn?: string;
+  primaryBtnURL?: string;
+  secondaryBtn?: string;
+  secondaryBtnURL?: string;
+  withReview?: boolean;
+  avatars?: string[];
+  rating?: { score: number; total: number };
+  starCount?: number;
+  reviews?: { count: number; text: string };
+  src?: ImageMetadata;
+  alt?: string;
+}
+
 const {
   title,
   subTitle,
@@ -15,29 +31,12 @@ const {
   secondaryBtnURL,
   withReview,
   avatars,
-  starCount,
   rating,
+  starCount,
   reviews,
   src,
   alt
 } = Astro.props;
-
-// Define TypeScript interface for props
-interface Props {
-  title: string;
-  subTitle?: string;
-  primaryBtn?: string;
-  primaryBtnURL?: string;
-  secondaryBtn?: string;
-  secondaryBtnURL?: string;
-  withReview?: boolean;
-  avatars?: Array<string>;
-  starCount?: number;
-  rating?: string;
-  reviews?: string;
-  src?: any;
-  alt?: string;
-}
 ---
 
 <!-- Defining a grid container that holds all the content -->
@@ -71,9 +70,14 @@ interface Props {
     </div>
 
     <!-- Review Section: This section presents avatars, review ratings and the number of reviews -->
-    { withReview ? (
-    <ReviewComponent avatars={avatars} starCount={starCount} rating={rating} reviews={reviews} />
-    ) : "" }
+{withReview && (
+  <ReviewComponent 
+    avatars={avatars} 
+    starCount={starCount} 
+    rating={`${rating.score} / ${rating.total}`} 
+    reviews={`From Over ${reviews.count.toLocaleString()} ${reviews.text}`} 
+  />
+)}
 
   </div>
   <!-- Hero Image Section -->
