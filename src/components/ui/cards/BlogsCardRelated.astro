@@ -1,0 +1,39 @@
+---
+// Import necessary modules and utilities
+import { Image } from "astro:assets";
+import { formatDate } from "@utils/utils";
+import type { CollectionEntry } from "astro:content";
+
+const { blogsEntry, recentBlogLocale = "" } = Astro.props;
+
+interface Props {
+  blogsEntry: CollectionEntry<"blogs">;
+  recentBlogLocale?: string;
+}
+---
+
+<a
+  class="group block rounded-xl outline-none ring-zinc-500 transition duration-300 focus-visible:ring dark:ring-zinc-200 dark:focus:outline-none"
+  href={recentBlogLocale !== "" ? `/${recentBlogLocale}/blog/${blogsEntry.slug}/` : `/blog/${blogsEntry.slug}/`}
+  data-astro-prefetch
+>
+  <div>
+    <Image
+      class="aspect-video rounded-xl"
+      src={blogsEntry.data.cardImage}
+      alt={blogsEntry.data.cardImageAlt}
+      draggable={"false"}
+      format={"avif"}
+    />
+    <!-- The title of the blog post -->
+    <h3
+      class="mt-2 text-balance text-lg font-medium text-neutral-800 group-hover:text-orange-400 dark:text-neutral-300 dark:group-hover:text-neutral-50"
+    >
+      {blogsEntry.data.title}
+    </h3>
+    <!-- The formatted publication date of the blog post -->
+    <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-400">
+      {formatDate(blogsEntry.data.pubDate)}
+    </p>
+  </div></a
+>

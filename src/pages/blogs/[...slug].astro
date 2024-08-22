@@ -4,8 +4,8 @@ import { SITE } from "@data/constants";
 import MainLayout from "@/layouts/MainLayout.astro";
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
-import AvatarBlogLarge from "@components/ui/avatars/AvatarBlogLarge.astro";
-import CardRelated from "@components/ui/cards/CardRelated.astro";
+import AvatarBlogsLarge from "@components/ui/avatars/AvatarBlogsLarge.astro";
+import BlogsCardRelated from "@components/ui/cards/BlogsCardRelated.astro";
 import Bookmark from "@components/ui/buttons/Bookmark.astro";
 import SocialShare from "@components/ui/buttons/SocialShare.astro";
 import PostFeedback from "@components/ui/feedback/PostFeedback.astro";
@@ -91,7 +91,7 @@ const pageTitle: string = `${post.data.title} | ${SITE.title}`;
     <div class="max-w-2xl">
       <div class="mb-6 flex items-center justify-between">
         <div class="flex w-full gap-x-5 sm:items-center sm:gap-x-3">
-          <AvatarBlogLarge blogEntry={post} />
+          <AvatarBlogsLarge blogsEntry={post} />
           <div class="grow">
             <div class="flex items-center justify-between gap-x-2">
               <div>
@@ -179,7 +179,7 @@ const pageTitle: string = `${post.data.title} | ${SITE.title}`;
     </div>
 
     <div class="grid grid-cols-2 gap-6">
-      {relatedPosts.map((entry) => <CardRelated blogEntry={entry} />)}
+      {relatedPosts.map((entry) => <BlogsCardRelated blogsEntry={entry} />)}
     </div>
   </section>  
 </MainLayout>
