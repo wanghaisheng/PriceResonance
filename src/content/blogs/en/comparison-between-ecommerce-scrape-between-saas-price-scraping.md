@@ -168,5 +168,5 @@ Here’s a list of tools that allow users to perform web scraping tasks by simpl
 These tools leverage advancements in natural language processing to simplify the web scraping process, allowing users to define their scraping tasks in everyday language. This capability makes it much easier for non-technical users to automate data extraction without needing to understand the underlying complexities of web scraping.
 
 Citations:
-[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/29508173/0bcedd7a-1da5-4a98-b273-c9d0bc37ca16/paste.txt
-[2] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/29508173/75c32215-4a2a-4a04-8873-2d0b8d2ac6b6/paste-2.txt
+* [1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/29508173/0bcedd7a-1da5-4a98-b273-c9d0bc37ca16/paste.txt
+* [2] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/29508173/75c32215-4a2a-4a04-8873-2d0b8d2ac6b6/paste-2.txt
