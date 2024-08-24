@@ -6,7 +6,7 @@ authorImage: "@/images/blog/jacob.avif"
 authorImageAlt: "Avatar Description"
 pubDate: 2024-08-24
 cardImage: "@/images/blogs/post-4.avif"
-CardImageAlt: "Why We Need a SaaS Price Plan Dataset"
+cardImageAlt: "Why We Need a SaaS Price Plan Dataset"
 readTime: 4
 tags: ["dataset", "price-plan", "saas"]
 
