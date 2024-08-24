@@ -1,22 +1,14 @@
-### Title: "Why I Started PriceResonance"
-
-### Description: "The journey behind creating an AI-powered tool for optimizing SaaS pricing strategies."
-
-### Author: Jacob
-
-### Author Image: "@/images/blog/jacob.avif"
-
-### Author Image Alt: "Avatar Description"
-
-### Publication Date: 2024-08-24
-
-### Card Image: "@/images/blogs/post-1.avif"
-
-### Card Image Alt: "Why We Need a SaaS Price Plan Dataset"
-
-### Read Time: 4 minutes
-
-### Tags: ["dataset", "price-plan", "saas"]
+---
+title: "Why I Started PriceResonance"
+description: "The journey behind creating an AI-powered tool for optimizing SaaS pricing strategies."
+author: Jacob
+authorImage: "@/images/blog/jacob.avif"
+authorImageAlt: "Avatar Description"
+pubDate: 2024-08-24
+cardImage: "@/images/blogs/post-1.avif"
+CardImageAlt: "Why We Need a SaaS Price Plan Dataset"
+readTime: 4 minutes
+tags: ["dataset", "price-plan", "saas"]
 
 ---
 
