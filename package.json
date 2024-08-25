@@ -7,7 +7,7 @@
     "prebuild": "npm run convert-images",
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build && node process-html.mjs && node move.js",
+    "build": "astro check && astro build && node process-html.mjs && node move.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },
