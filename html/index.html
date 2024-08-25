@@ -1,0 +1,848 @@
+<html>
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-B7HQN7HWC6"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-B7HQN7HWC6");
+    </script>
+    <base href="./" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PriceResonance - Competitive Price Tracking Made Easy</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-color: #4f46e5;
+        --secondary-color: #10b981;
+        --background-color: #f9fafb;
+        --text-color: #1f2937;
+        --light-text-color: #6b7280;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--background-color);
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      header {
+        background-color: #fff;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+          0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        padding: 1rem 0;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--primary-color);
+      }
+      .nav-links a {
+        color: var(--text-color);
+        text-decoration: none;
+        margin-left: 1.5rem;
+        transition: color 0.3s ease;
+      }
+      .nav-links a:hover {
+        color: var(--primary-color);
+      }
+      .hero {
+        background-color: var(--primary-color);
+        color: #fff;
+        padding: 4rem 0;
+        text-align: center;
+      }
+      .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+      .hero p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+      }
+      .cta-button {
+        display: inline-block;
+        background-color: var(--secondary-color);
+        color: #fff;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.375rem;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+      }
+      .cta-button:hover {
+        background-color: #0e9f6e;
+      }
+      .features {
+        padding: 4rem 0;
+        background-color: #fff;
+      }
+      .features h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+      .feature-card {
+        background-color: #f3f4f6;
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        text-align: center;
+      }
+      .feature-card h3 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+      }
+      .how-it-works {
+        padding: 4rem 0;
+        background-color: var(--background-color);
+      }
+      .how-it-works h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+      .step-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+      }
+      .step-card {
+        background-color: #fff;
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        text-align: center;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
+      .step-card h3 {
+        color: var(--secondary-color);
+        margin-bottom: 1rem;
+      }
+      .pricing {
+        padding: 4rem 0;
+        background-color: #fff;
+      }
+      .pricing h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+      .pricing-card {
+        background-color: #f3f4f6;
+        border-radius: 0.5rem;
+        padding: 2rem;
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+      .pricing-card:hover {
+        transform: translateY(-5px);
+      }
+      .pricing-card h3 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+      }
+      .price {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--secondary-color);
+        margin-bottom: 1rem;
+      }
+      .pricing-features {
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 2rem;
+      }
+      .pricing-features li {
+        margin-bottom: 0.5rem;
+      }
+      footer {
+        background-color: var(--text-color);
+        color: #fff;
+        padding: 2rem 0;
+        text-align: center;
+      }
+      footer a {
+        color: var(--secondary-color);
+        text-decoration: none;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+      .cost-calculator {
+        padding: 4rem 0;
+        background-color: #fff;
+      }
+      .cost-calculator h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+      .calculator-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 2rem;
+        background-color: var(--background-color);
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
+      .calculator-input {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+      }
+      .calculator-input label {
+        flex: 1;
+        font-weight: 600;
+      }
+      .calculator-input input[type="range"] {
+        flex: 2;
+        -webkit-appearance: none;
+        width: 100%;
+        height: 8px;
+        border-radius: 5px;
+        background: #d7dcdf;
+        outline: none;
+        opacity: 0.7;
+        transition: opacity 0.2s;
+      }
+      .calculator-input input[type="range"]:hover {
+        opacity: 1;
+      }
+      .calculator-input input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--primary-color);
+        cursor: pointer;
+      }
+      .calculator-input input[type="range"]::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--primary-color);
+        cursor: pointer;
+      }
+      .calculator-output {
+        text-align: center;
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-top: 2rem;
+      }
+      .calculator-output .cost {
+        color: var(--primary-color);
+        font-size: 2rem;
+      }
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 3rem;
+      }
+      .comparison-table th,
+      .comparison-table td {
+        border: 1px solid #e5e7eb;
+        padding: 1rem;
+        text-align: left;
+      }
+      .comparison-table th {
+        background-color: var(--background-color);
+        font-weight: 600;
+      }
+      .comparison-table tr:nth-child(even) {
+        background-color: var(--background-color);
+      }
+      .price-plan {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+      }
+      .highlight {
+        color: var(--primary-color);
+        font-weight: 600;
+      }
+      .add-provider {
+        margin-top: 2rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .add-provider h3 {
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+      .add-provider input[type="text"] {
+        width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        border: 1px solid #d1d5db;
+        border-radius: 0.25rem;
+      }
+      .add-provider button {
+        display: block;
+        width: 100%;
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        padding: 0.75rem 1rem;
+        border-radius: 0.25rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-size: 1rem;
+      }
+      .add-provider button:hover {
+        background-color: #4338ca;
+      }
+      .scraping-methods {
+        padding: 4rem 0;
+        background-color: var(--background-color);
+      }
+      .scraping-methods h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+      .method-comparison {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+      }
+      .method {
+        flex: 1;
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
+      .method h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: var(--primary-color);
+      }
+      .method ul {
+        padding-left: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      .method-footer {
+        font-style: italic;
+        color: #6b7280;
+      }
+    </style>
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "nrg0x51svm");
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">PriceResonance</div>
+          <div class="nav-links">
+            <a href="https://priceresonance.com#features">Features</a>
+            <a href="https://priceresonance.com#how-it-works">How It Works</a>
+            <a href="https://priceresonance.com#pricing">Pricing</a>
+            <a href="https://priceresonance.com/blogs">Blogs</a>
+
+            <a href="https://priceresonance.com/about">About</a>
+            <a href="https://priceresonance.com/contact">Contact</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <h1>Stay Ahead of the Competition with PriceResonance</h1>
+        <p>
+          Track, analyze, and optimize your pricing strategy with our advanced
+          AI-powered platform.
+        </p>
+        <a href="https://priceresonance.com/get-started" class="cta-button"
+          >Try PriceResonance Today</a
+        >
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <div class="container">
+        <h2>Key Features</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3>No code No point and click</h3>
+            <p>
+              straightforward with url,natural language task description,LLM take care of everything.
+            </p>
+          </div>
+          <div class="feature-card">
+            <h3>AI-Powered Analysis</h3>
+            <p>
+              Leverage advanced AI algorithms to gain insights into pricing
+              trends and market positioning.
+            </p>
+          </div>
+          <div class="feature-card">
+            <h3>Customizable Alerts</h3>
+            <p>
+              Set up personalized alerts to stay informed about significant
+              price changes or market shifts.
+            </p>
+          </div>
+          <div class="feature-card">
+            <h3>Historical Data</h3>
+            <p>
+              Access comprehensive historical pricing data to identify patterns
+              and make informed decisions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+      <div class="container">
+        <h2>How It Works</h2>
+        <div class="step-grid">
+          <div class="step-card">
+            <h3>Step 1: Setup</h3>
+            <p>
+              Enter your product URLs and competitor websites to start tracking
+              prices.
+            </p>
+          </div>
+          <div class="step-card">
+            <h3>Step 2: Monitor</h3>
+            <p>
+              Our AI continuously monitors and collects pricing data from
+              specified sources.
+            </p>
+          </div>
+          <div class="step-card">
+            <h3>Step 3: Analyze</h3>
+            <p>
+              Receive detailed reports and insights about pricing trends and
+              market positioning.
+            </p>
+          </div>
+          <div class="step-card">
+            <h3>Step 4: Optimize</h3>
+            <p>
+              Make data-driven decisions to optimize your pricing strategy and
+              boost competitiveness.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="scraping-methods">
+      <div class="container">
+        <h2>No-Code Web Scraping Methods</h2>
+        <div class="method-comparison">
+          <div class="method">
+            <h3>Point-and-Click Interface</h3>
+            <ul>
+              <li>Interactive website element selection</li>
+              <li>Visual "training" of the scraper</li>
+              <li>
+                Advanced parameter settings (scheduling, batch URL scraping,
+                country-specific scraping)
+              </li>
+              <li>Multiple output formats (JSON, CSV, Excel)</li>
+            </ul>
+            <p>
+              Ideal for users who need high customization and complex scraping
+              tasks.
+            </p>
+            <p class="method-footer">
+              Offers greater flexibility but may require more setup time.
+            </p>
+          </div>
+          <div class="method">
+            <h3>URL-First Method</h3>
+            <ul>
+              <li>Simple URL input</li>
+              <li>Quick setup process</li>
+              <li>Immediate data extraction</li>
+              <li>Suitable for straightforward scraping tasks</li>
+            </ul>
+            <p>
+              Perfect for users who need quick data extraction from specific
+              URLs.
+            </p>
+            <p class="method-footer">
+              Faster to set up but may have limited customization options.
+            </p>
+          </div>
+        </div>
+        <p style="text-align: center; margin-top: 2rem">
+          Choose the method that best suits your project requirements. Consider
+          factors such as the complexity of your scraping needs, the level of
+          customization required, and the time you can dedicate to setting up
+          your scraping tasks.
+        </p>
+      </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+      <div class="container">
+        <h2>Pricing Plans</h2>
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h3>Starter</h3>
+            <div class="price">$19/mo</div>
+            <ul class="pricing-features">
+              <li>Track up to 10000 products</li>
+              <li>Daily price updates</li>
+              <li>Basic reporting</li>
+              <li>Email support</li>
+            </ul>
+            <a href="#" class="cta-button">Choose Plan</a>
+          </div>
+          <div class="pricing-card">
+            <h3>Professional</h3>
+            <div class="price">$39/mo</div>
+            <ul class="pricing-features">
+              <li>Up to 30000 Domains</li>
+              <li>Hourly price updates</li>
+              <li>Advanced reporting & analytics</li>
+              <li>Priority email & chat support</li>
+            </ul>
+            <a href="#" class="cta-button">Choose Plan</a>
+          </div>
+          <div class="pricing-card">
+            <h3>Enterprise</h3>
+            <div class="price">Custom</div>
+            <ul class="pricing-features">
+              <li>Unlimited product tracking</li>
+              <li>Real-time price updates</li>
+              <li>Custom reporting & API access</li>
+              <li>Dedicated account manager</li>
+            </ul>
+
+            <a href="https://priceresonance.com/contact" class="cta-button"
+              >Contact Sales</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="cost-calculator" class="cost-calculator">
+      <div class="container">
+        <h2>Cost Calculator</h2>
+        <div class="calculator-container">
+          <div class="calculator-input">
+            <label for="scrape-count">Number of Scrapes:</label>
+            <input
+              type="range"
+              id="scrape-count"
+              min="1000"
+              max="1000000"
+              value="10000"
+              step="1000"
+            />
+            <span id="scrape-count-display">10,000</span>
+          </div>
+          <div class="calculator-output">
+            Estimated monthly cost:
+            <span class="cost" id="estimated-cost">$49</span>
+          </div>
+        </div>
+
+        <div class="add-provider">
+          <h3>Add New Provider</h3>
+          <input
+            type="text"
+            id="provider-url"
+            placeholder="Enter provider URL"
+          />
+          <button id="add-provider-btn">Add Provider</button>
+        </div>
+
+        <table class="comparison-table" id="comparison-table">
+          <thead>
+            <tr>
+              <th>Provider</th>
+              <th>Price Plans</th>
+              <th>Cost for 10,000 credits</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>PriceResonance</td>
+              <td>
+                <div class="price-plan">
+                  Starter: $49/mo for 100,000 credits
+                </div>
+                <div class="price-plan">Pro: $99/mo for 500,000 credits</div>
+                <div class="price-plan">
+                  Enterprise: $199/mo for 1,000,000 credits
+                </div>
+              </td>
+              <td id="price-resonance-cost" class="highlight">$49</td>
+            </tr>
+            <tr>
+              <td>https://www.nocodescraper.com/#pricing</td>
+              <td>
+                <div class="price-plan">Basic: $200/mo for 10,000 credits</div>
+                <div class="price-plan">
+                  Standard: $203.99/mo for 10,000 credits
+                </div>
+                <div class="price-plan">
+                  Premium: $209.99/mo for 10,000 credits
+                </div>
+              </td>
+              <td>$200</td>
+            </tr>
+            <tr>
+              <td>https://www.browse.ai/pricing</td>
+              <td>
+                <div class="price-plan">Starter: $19/mo for 10,000 credits</div>
+                <div class="price-plan">Professional: $179/mo for 120,000 credits</div>
+                <div class="price-plan">
+                  Team: $249/mo for 120,000 credits
+                </div>
+              </td>
+              <td>$19</td>
+            </tr>
+            <tr>
+              <td>https://www.firecrawl.dev/pricing</td>
+              <td>
+                <div class="price-plan">Starter: $16/mo for 3,000 credits</div>
+                <div class="price-plan">Professional: $83/mo for 100,000 credits</div>
+                <div class="price-plan">
+                  Team: $333/mo for 500,000 credits
+                </div>
+              </td>
+              <td>$50</td>
+            </tr>
+            <tr>
+              <td>https://www.octoparse.com/pricing</td>
+              <td>
+                <div class="price-plan">Starter: $119/mo for 100 task</div>
+                <div class="price-plan">Professional: $299/mo for 250 task</div>
+                <div class="price-plan">
+                  Team: $x/mo
+                </div>
+              </td>
+              <td>$unk</td>
+            </tr>
+            <tr>
+              <td>https://www.webscraper.io/pricing</td>
+              <td>
+                <div class="price-plan">Starter: $50/mo for 5,000 credits</div>
+                <div class="price-plan">Professional: $100/mo for 20,000 credits</div>
+                <div class="price-plan">
+                  Team: $200/mo for 50,000 credits
+                </div>
+              </td>
+              <td>$100</td>
+            </tr>
+            <tr>
+              <td>https://www.webscraper.io/pricing</td>
+              <td>
+                <div class="price-plan">Starter: $399/mo for 5,000 credits</div>
+                <div class="price-plan">Professional: $599/mo for 20,000 credits</div>
+                <div class="price-plan">
+                  Team: $1099/mo for 50,000 credits
+                </div>
+              </td>
+              <td>$19</td>
+            </tr>
+            <tr>
+              <td>https://simplescraper.io/pricing</td>
+              <td>
+                <div class="price-plan">Starter: $39/mo for 6,000 credits</div>
+                <div class="price-plan">Professional: $70/mo for 15,000 credits</div>
+                <div class="price-plan">
+                  Team: $150/mo for 40,000 credits
+                </div>
+              </td>
+              <td>$50+</td>
+            </tr>
+            <tr>
+              <td>https://datagrab.io/pricing</td>
+              <td>
+                <div class="price-plan">Starter: $25/mo for 5,000 credits</div>
+                <div class="price-plan">Professional: $80/mo for 50,000 credits</div>
+                <div class="price-plan">
+                  Team: $200/mo for 200,000 credits
+                </div>
+              </td>
+              <td>$50</td>
+            </tr>
+            <tr>
+              <td>https://webautomation.io/pricing</td>
+              <td>
+                <div class="price-plan">Starter: $99/mo for 400,000 credits</div>
+                <div class="price-plan">Professional: $249/mo for 2,500,000 credits</div>
+                <div class="price-plan">
+                    $1/1000 credit
+                </div>
+              </td>
+              <td>$19</td>
+            </tr>
+            <tr>
+              <td>https://www.browse.ai/pricing</td>
+              <td>
+                <div class="price-plan">Starter: $19/mo for 10,000 credits</div>
+                <div class="price-plan">Professional: $179/mo for 120,000 credits</div>
+                <div class="price-plan">
+                  Team: $249/mo for 120,000 credits
+                </div>
+              </td>
+              <td>$19</td>
+            </tr>
+
+
+
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>
+          Powered by
+          <a href="https://priceresonance.com" target="_blank"
+            >priceresonance.com</a
+          >
+          - Empowering AI Innovation
+        </p>
+        <p>
+          <a href="https://tiktokastudio.com" target="_blank"
+            >tiktokastudio.com</a
+          >
+          - Social video automation Toolkit
+        </p>
+        <p>
+          <a href="https://freebestai.org" target="_blank">FreeBestAI.org</a> -
+          Free AI tool directory
+        </p>
+      </div>
+    </footer>
+    <script>
+      const scrapeCountSlider = document.getElementById("scrape-count");
+      const scrapeCountDisplay = document.getElementById(
+        "scrape-count-display"
+      );
+      const estimatedCost = document.getElementById("estimated-cost");
+      const priceResonanceCost = document.getElementById(
+        "price-resonance-cost"
+      );
+      const comparisonTable = document.getElementById("comparison-table");
+      const providerUrlInput = document.getElementById("provider-url");
+      const addProviderBtn = document.getElementById("add-provider-btn");
+
+      function updateCost() {
+        const scrapeCount = parseInt(scrapeCountSlider.value);
+        scrapeCountDisplay.textContent = scrapeCount.toLocaleString();
+
+        let cost;
+        if (scrapeCount <= 100000) {
+          cost = 49;
+        } else if (scrapeCount <= 500000) {
+          cost = 99;
+        } else {
+          cost = 199;
+        }
+
+        estimatedCost.textContent = `$${cost}`;
+        priceResonanceCost.textContent = `$${cost}`;
+      }
+
+      scrapeCountSlider.addEventListener("input", updateCost);
+      updateCost(); // Initialize with default value
+
+      addProviderBtn.addEventListener("click", async () => {
+        const url = providerUrlInput.value.trim();
+        if (!url) return;
+
+        try {
+          // Simulate fetching data from the provided URL
+          // In a real-world scenario, you would make an actual API call here
+          const providerData = await simulateFetchProviderData(url);
+
+          // Add new row to the comparison table
+          const newRow = comparisonTable.insertRow(-1);
+          const cell1 = newRow.insertCell(0);
+          const cell2 = newRow.insertCell(1);
+          const cell3 = newRow.insertCell(2);
+
+          cell1.textContent = providerData.name;
+          cell2.innerHTML = providerData.pricePlans
+            .map((plan) => `<div class="price-plan">${plan}</div>`)
+            .join("");
+          cell3.textContent = providerData.costFor10k;
+
+          // Clear input field
+          providerUrlInput.value = "";
+        } catch (error) {
+          console.error("Error adding provider:", error);
+          alert("Failed to add provider. Please try again.");
+        }
+      });
+
+      // Simulate fetching provider data
+      async function simulateFetchProviderData(url) {
+        // This is a mock function. In a real scenario, you would fetch actual data from the provided URL.
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve({
+              name: `Provider from ${new URL(url).hostname}`,
+              pricePlans: [
+                "Basic: $69/mo for 8,000 credits",
+                "Pro: $129/mo for 25,000 credits",
+                "Enterprise: $249/mo for 60,000 credits",
+              ],
+              costFor10k: "$129",
+            });
+          }, 1000); // Simulate network delay
+        });
+      }
+    </script>
+  </body>
+</html>
