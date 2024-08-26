@@ -1,9 +1,9 @@
 // An array of links for navigation bar
 const navBarLinks = [
   { name: "Home", url: "/" },
-  { name: "Products", url: "/products" },
-  { name: "Services", url: "/services" },
-  { name: "Blog", url: "/blog" },
+  // { name: "Products", url: "/products" },
+  { name: "Services", url: "/get-started" },
+  { name: "Blog", url: "/blogs" },
   { name: "Contact", url: "/contact" },
 ];
 // An array of links for footer
@@ -19,8 +19,8 @@ const footerLinks = [
   {
     section: "Company",
     links: [
-      { name: "About us", url: "#" },
-      { name: "Blog", url: "/blog" },
+      { name: "About us", url: "/about" },
+      { name: "Blog", url: "/blogs" },
       { name: "Careers", url: "#" },
       { name: "Customers", url: "#" },
     ],
@@ -29,7 +29,7 @@ const footerLinks = [
 // An object of links for social icons
 const socialLinks = {
   facebook: "https://www.facebook.com/",
-  x: "https://twitter.com/",
+  x: "https://twitter.com/edwin_uestc",
   github: "https://github.com/wanghaisheng/PriceResonance",
   google: "https://www.google.com/",
   slack: "https://slack.com/",
